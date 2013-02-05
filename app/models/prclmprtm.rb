@@ -1,6 +1,6 @@
 class Prclmprtm < ActiveRecord::Base
   require 'nokogiri'
-  set_table_name "prc_lmp_rtm"
+  self.table_name = 'prc_lmp_rtm'
 
   attr_accessible :data_item,
                   :resource_name,
