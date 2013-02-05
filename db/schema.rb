@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130204231608) do
+ActiveRecord::Schema.define(:version => 20130205011933) do
 
   create_table "entities", :force => true do |t|
     t.string   "data_item"
@@ -52,7 +52,5 @@ ActiveRecord::Schema.define(:version => 20130204231608) do
     t.datetime "created_at",                                  :null => false
     t.datetime "updated_at",                                  :null => false
   end
-
-  add_index "prc_lmp_rtm", ["data_item", "resource_name", "opr_date", "interval_num"], :name => "add_uniqueness_to_prc_lmp_rtm", :unique => true
 
 end
