@@ -35,11 +35,11 @@ class Prclmprtm < ActiveRecord::Base
         
         if t % 250 == 0 
         
-        Prclmprtm.import(records)
+	        Prclmprtm.import(records)
         
-        records = []
+	        records = []
 
-        puts "Imported record #{t} at #{Time.now}"
+	        puts "Imported record #{t} at #{Time.now}"
 
         end
                 

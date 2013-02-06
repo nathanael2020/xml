@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205011933) do
+ActiveRecord::Schema.define(:version => 20130206034904) do
+
+  create_table "as_req", :force => true do |t|
+    t.string   "data_item"
+    t.string   "market"
+    t.string   "resource_name"
+    t.datetime "opr_date"
+    t.integer  "interval_num"
+    t.decimal  "value",         :precision => 8, :scale => 2
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+  end
+
+  add_index "as_req", ["data_item", "market", "resource_name", "opr_date", "interval_num"], :name => "add_uniqueness_to_as_req", :unique => true
+
+  create_table "ene_slrs", :force => true do |t|
+    t.string   "data_item"
+    t.string   "market"
+    t.string   "resource_name"
+    t.datetime "opr_date"
+    t.integer  "interval_num"
+    t.decimal  "value",         :precision => 8, :scale => 2
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+  end
+
+  add_index "ene_slrs", ["data_item", "market", "resource_name", "opr_date", "interval_num"], :name => "add_uniqueness_to_ene_slrs", :unique => true
 
   create_table "entities", :force => true do |t|
     t.string   "data_item"
