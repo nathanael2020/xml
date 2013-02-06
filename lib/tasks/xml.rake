@@ -18,7 +18,7 @@ namespace :xml do
 
     Prclmpdam.import_from_xml_file(xml_file)
     
-    puts "Begin import from xml: #{Time.now}"
+    puts "End import from xml: #{Time.now}"
 
     end_time = Time.now
 
@@ -46,11 +46,13 @@ namespace :xml do
 
     Prclmprtm.import_from_xml_file(xml_file)
 
-    puts "Begin import from xml: #{Time.now}"
+    puts "End import from xml: #{Time.now}"
 
     end_time = Time.now
 
     puts "Time elapsed #{(end_time - beginning_time)*1000} milliseconds"
+    puts "Time elapsed #{(end_time - beginning_time)} seconds"
+    puts "Time elapsed #{(end_time - beginning_time)/60} minutes"
 
   end
 end
